@@ -10,9 +10,7 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  getUsers() {
-    this.appService.getUsersFromDB();
-  }
-
-  
+  // getUsers() {
+  //   this.appService.getUsersFromDB();
+  // }
 }

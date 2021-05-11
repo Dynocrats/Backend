@@ -1,5 +1,5 @@
 {
-  "name": "travelmate-api",
+  "name": "Backend",
   "version": "0.0.1",
   "description": "",
   "author": "",
@@ -24,6 +24,8 @@
     "@nestjs/common": "^7.6.15",
     "@nestjs/core": "^7.6.15",
     "@nestjs/platform-express": "^7.6.15",
+    "firebase-admin": "^9.7.0",
+    "firebase-functions": "^3.13.2",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.6"
@@ -66,5 +68,9 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "main": "dist/main.js",
+  "engines": {
+    "node": "12"
   }
 }
