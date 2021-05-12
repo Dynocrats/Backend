@@ -1,5 +1,3 @@
-import { BadRequestError } from "src/error/BadRequest.error";
+import { BadRequestError } from 'src/error/BadRequest.error';
 
-export class UserError extends BadRequestError {
-    
-}
+export class UserError extends BadRequestError {}

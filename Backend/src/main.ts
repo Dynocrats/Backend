@@ -15,11 +15,10 @@ import * as admin from 'firebase-admin';
 const server = express();
 
 export const createNestServer = async (expressInstance) => {
-
   admin.initializeApp({
-    databaseURL: "https://travelmate-620f4-default-rtdb.firebaseio.com/",
-    credential: admin.credential.applicationDefault()
-  })
+    databaseURL: 'https://travelmate-620f4-default-rtdb.firebaseio.com/',
+    credential: admin.credential.applicationDefault(),
+  });
 
   const app = await NestFactory.create(
     AppModule,
