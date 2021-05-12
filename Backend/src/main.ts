@@ -4,6 +4,8 @@ import * as express from 'express';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import * as functions from 'firebase-functions';
 
+import * as admin from 'firebase-admin';
+
 // async function bootstrap() {
 //   const app = await NestFactory.create(AppModule);
 //   await app.listen(3000);
@@ -13,6 +15,12 @@ import * as functions from 'firebase-functions';
 const server = express();
 
 export const createNestServer = async (expressInstance) => {
+
+  admin.initializeApp({
+    databaseURL: "https://travelmate-620f4-default-rtdb.firebaseio.com/",
+    credential: admin.credential.applicationDefault()
+  })
+
   const app = await NestFactory.create(
     AppModule,
     new ExpressAdapter(expressInstance),
